@@ -8,7 +8,9 @@
 </head>
 <body>
     <div id="app">
+
         <h1>first vue {{ test }}</h1>
+        <h2><a v-bind:href="google">Google</a></h2>
     </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -16,7 +18,8 @@
     new Vue ({
         el: '#app',
         data: {
-            test: 'Hello world'
+            test: 'Hello world',
+            google: 'https://www.google.com.ua/?hl=ru'
         }
     })
 </script>
