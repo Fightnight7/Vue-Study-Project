@@ -11,6 +11,7 @@
         <h1>first vue {{ test }}</h1>
         <h2><a v-bind:href="google">Google</a></h2>
         <h3 v-html="html"></h3>
+        <h4 v-on:click="backgroundChange">background</h4>
     </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -21,6 +22,11 @@
             test: 'Hello world',
             google: 'https://www.google.com.ua/?hl=ru',
             html:  '<p style="background: yellow">Generated text</p>'
+        },
+        methods: {
+            backgroundChange: function(e) {
+                e.target.style.background = "green"
+            }
         }
     })
 </script>
